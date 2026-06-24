@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BluePeak Properties | Find Your Perfect Place</title>
+  <meta name="description" content="Explore premium residential and commercial properties across South Africa with BluePeak Properties. Browse listings, calculate your bond, and connect with trusted agents.">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <!-- photo needed: 32x32 or 64x64 px favicon icon, simple mountain-peak or building logomark on transparent background -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-mountain-city"></i>
+        <span>BluePeak</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="agents.html">Agents</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="mortgage-calculator.html">Mortgage Calculator</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-cta">Contact Agent</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/images/hero-house.jpg" alt="Luxury home exterior at dusk">
+      <!-- photo needed: large, high-quality luxury house exterior, dusk or golden-hour lighting, landscape orientation, at least 1600px wide -->
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content" data-aos="fade-up">
+      <h1>Find Your Dream Home Today</h1>
+      <p>Explore premium residential and commercial properties across South Africa.</p>
+      <div class="hero-buttons">
+        <a href="properties.html" class="btn btn-primary">Browse Properties</a>
+        <a href="contact.html" class="btn btn-outline-light">Contact Agent</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROPERTY SEARCH PANEL ===== -->
+  <section class="search-panel-section">
+    <div class="container">
+      <form class="search-panel" id="searchPanel" data-aos="fade-up">
+        <div class="search-field">
+          <label for="searchLocation">Location</label>
+          <select id="searchLocation" name="location">
+            <option value="">Any Location</option>
+            <option value="sandton">Sandton</option>
+            <option value="rosebank">Rosebank</option>
+            <option value="centurion">Centurion</option>
+            <option value="midrand">Midrand</option>
+            <option value="pretoria">Pretoria</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="searchType">Property Type</label>
+          <select id="searchType" name="type">
+            <option value="">Any Type</option>
+            <option value="luxury">Luxury Home</option>
+            <option value="apartment">Apartment</option>
+            <option value="townhouse">Townhouse</option>
+            <option value="commercial">Commercial</option>
+            <option value="land">Land</option>
+            <option value="student">Student Accommodation</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="searchPrice">Price Range</label>
+          <select id="searchPrice" name="price">
+            <option value="">Any Price</option>
+            <option value="0-1000000">Under R1,000,000</option>
+            <option value="1000000-3000000">R1,000,000 - R3,000,000</option>
+            <option value="3000000-6000000">R3,000,000 - R6,000,000</option>
+            <option value="6000000-999999999">R6,000,000+</option>
+          </select>
+        </div>
+
+        <div class="search-field">
+          <label for="searchBedrooms">Bedrooms</label>
+          <select id="searchBedrooms" name="bedrooms">
+            <option value="">Any</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </form>
+    </div>
+  </section>
+
+<!-- ===== FEATURED PROPERTIES ===== -->
+  <section class="featured-properties">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow">Handpicked Listings</span>
+        <h2>Featured Properties</h2>
+      </div>
+
+      <div class="properties-grid">
+
+        <div class="property-card" data-aos="fade-up" data-id="bp-001">
+          <div class="property-image">
+            <img src="assets/images/property-1.jpg" alt="Modern luxury home in Sandton">
+            <!-- photo needed: modern luxury house exterior, daytime, landscape orientation -->
+            <span class="property-badge badge-sale">For Sale</span>
+            <button class="favorite-btn" data-id="bp-001" aria-label="Save property">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="property-body">
+            <span class="property-price">R 4,250,000</span>
+            <h3>Modern 4-Bedroom Villa</h3>
+            <p class="property-address"><i class="fa-solid fa-location-dot"></i> Sandton, Johannesburg</p>
+            <div class="property-meta">
+              <span><i class="fa-solid fa-bed"></i> 4</span>
+              <span><i class="fa-solid fa-bath"></i> 3</span>
+              <span><i class="fa-solid fa-warehouse"></i> 2</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 380m²</span>
+            </div>
+            <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card" data-aos="fade-up" data-aos-delay="50" data-id="bp-002">
+          <div class="property-image">
+            <img src="assets/images/property-2.jpg" alt="Apartment in Rosebank">
+            <!-- photo needed: modern apartment building exterior or balcony view, daytime, landscape orientation -->
+            <span class="property-badge badge-rent">To Rent</span>
+            <button class="favorite-btn" data-id="bp-002" aria-label="Save property">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="property-body">
+            <span class="property-price">R 14,500 <small>/month</small></span>
+            <h3>Modern 2-Bed Apartment</h3>
+            <p class="property-address"><i class="fa-solid fa-location-dot"></i> Rosebank, Johannesburg</p>
+            <div class="property-meta">
+              <span><i class="fa-solid fa-bed"></i> 2</span>
+              <span><i class="fa-solid fa-bath"></i> 2</span>
+              <span><i class="fa-solid fa-warehouse"></i> 1</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 95m²</span>
+            </div>
+            <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card" data-aos="fade-up" data-aos-delay="100" data-id="bp-003">
+          <div class="property-image">
+            <img src="assets/images/property-3.jpg" alt="Townhouse in Centurion">
+            <!-- photo needed: townhouse exterior, daytime, landscape orientation -->
+            <span class="property-badge badge-sale">For Sale</span>
+            <button class="favorite-btn" data-id="bp-003" aria-label="Save property">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="property-body">
+            <span class="property-price">R 1,890,000</span>
+            <h3>Secure 3-Bed Townhouse</h3>
+            <p class="property-address"><i class="fa-solid fa-location-dot"></i> Centurion, Pretoria</p>
+            <div class="property-meta">
+              <span><i class="fa-solid fa-bed"></i> 3</span>
+              <span><i class="fa-solid fa-bath"></i> 2</span>
+              <span><i class="fa-solid fa-warehouse"></i> 2</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 210m²</span>
+            </div>
+            <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card" data-aos="fade-up" data-id="bp-004">
+          <div class="property-image">
+            <img src="assets/images/property-4.jpg" alt="Commercial office space in Midrand">
+            <!-- photo needed: modern commercial office building exterior, daytime, landscape orientation -->
+            <span class="property-badge badge-rent">To Rent</span>
+            <button class="favorite-btn" data-id="bp-004" aria-label="Save property">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="property-body">
+            <span class="property-price">R 38,000 <small>/month</small></span>
+            <h3>Open-Plan Office Space</h3>
+            <p class="property-address"><i class="fa-solid fa-location-dot"></i> Midrand, Johannesburg</p>
+            <div class="property-meta">
+              <span><i class="fa-solid fa-door-open"></i> Open Plan</span>
+              <span><i class="fa-solid fa-warehouse"></i> 6</span>
+              <span><i class="fa-solid fa-ruler-combined"></i> 450m²</span>
+            </div>
+            <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card" data-aos="fade-up" data-aos-delay="50" data-id="bp-005">
+          <div class="property-image">
+            <img src="assets/images/property-5.jpg" alt="Vacant land plot">
+            <!-- photo needed: vacant land plot or aerial view of land, daytime, landscape orientation -->
+            <span class="property-badge badge-sale">For Sale</span>
+            <button class="favorite-btn" data-id="bp-005" aria-label="Save property">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="property-body">
+            <span class="property-price">R 950,000</span>
+            <h3>Residential Stand</h3>
+            <p class="property-address"><i class="fa-solid fa-location-dot"></i> Pretoria East</p>
+            <div class="property-meta">
+              <span><i class="fa-solid fa-ruler-combined"></i> 800m² Stand</span>
+              <span><i class="fa-solid fa-road"></i> Tarred Road</span>
+            </div>
+            <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card" data-aos="fade-up" data-aos-delay="100" data-id="bp-006">
+          <div class="property-image">
+            <img src="assets/images/property-6.jpg" alt="Student accommodation building">
+            <!-- photo needed: modern student accommodation building exterior, daytime, landscape orientation -->
+            <span class="property-badge badge-rent">To Rent</span>
+            <button class="favorite-btn" data-id="bp-006" aria-label="Save property">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="property-body">
+            <span class="property-price">R 4,200 <small>/month</small></span>
+            <h3>Student Studio Unit</h3>
+            <p class="property-address"><i class="fa-solid fa-location-dot"></i> Hatfield, Pretoria</p>
+            <div class="property-meta">
+              <span><i class="fa-solid fa-bed"></i> 1</span>
+              <span><i class="fa-solid fa-bath"></i> 1</span>
+              <span><i class="fa-solid fa-wifi"></i> Wi-Fi Incl.</span>
+            </div>
+            <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="view-all-wrap" data-aos="fade-up">
+        <a href="properties.html" class="btn btn-outline">View All Properties</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORIES ===== -->
+  <section class="categories">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow">Browse By Type</span>
+        <h2>Property Categories</h2>
+      </div>
+
+      <div class="categories-grid">
+        <a href="properties.html?type=luxury" class="category-card" data-aos="fade-up">
+          <i class="fa-solid fa-house-chimney"></i>
+          <h3>Luxury Homes</h3>
+        </a>
+        <a href="properties.html?type=apartment" class="category-card" data-aos="fade-up" data-aos-delay="50">
+          <i class="fa-solid fa-building"></i>
+          <h3>Apartments</h3>
+        </a>
+        <a href="properties.html?type=townhouse" class="category-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-house-chimney-window"></i>
+          <h3>Townhouses</h3>
+        </a>
+        <a href="properties.html?type=commercial" class="category-card" data-aos="fade-up" data-aos-delay="150">
+          <i class="fa-solid fa-city"></i>
+          <h3>Commercial</h3>
+        </a>
+        <a href="properties.html?type=land" class="category-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <h3>Land</h3>
+        </a>
+        <a href="properties.html?type=student" class="category-card" data-aos="fade-up" data-aos-delay="250">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Student Accommodation</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="why-us">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow">Why BluePeak</span>
+        <h2>Why Clients Choose Us</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up">
+          <i class="fa-solid fa-user-tie"></i>
+          <h3>Trusted Agents</h3>
+          <p>A team of licensed, experienced agents who put your interests first.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-shield-check"></i>
+          <h3>Verified Listings</h3>
+          <p>Every property is verified before it goes live — no surprises, no scams.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-tags"></i>
+          <h3>Affordable Prices</h3>
+          <p>Transparent pricing and honest valuations across every listing.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fa-solid fa-headset"></i>
+          <h3>24/7 Support</h3>
+          <p>Our team is reachable around the clock for viewings and queries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED AGENTS ===== -->
+  <section class="featured-agents">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow">Meet The Team</span>
+        <h2>Featured Agents</h2>
+      </div>
+
+      <div class="agents-grid">
+        <div class="agent-card" data-aos="fade-up">
+          <img src="assets/images/agent-1.jpg" alt="Nomvula Khumalo">
+          <!-- photo needed: professional headshot of a female real estate agent, business attire, friendly smile, portrait orientation -->
+          <div class="agent-body">
+            <h3>Nomvula Khumalo</h3>
+            <span>Senior Sales Agent</span>
+            <div class="agent-contact">
+              <a href="tel:+27110001111"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:nomvula@bluepeak.co.za"><i class="fa-solid fa-envelope"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="agent-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/images/agent-2.jpg" alt="Ryan Botha">
+          <!-- photo needed: professional headshot of a male real estate agent, business attire, friendly smile, portrait orientation -->
+          <div class="agent-body">
+            <h3>Ryan Botha</h3>
+            <span>Commercial Specialist</span>
+            <div class="agent-contact">
+              <a href="tel:+27110002222"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:ryan@bluepeak.co.za"><i class="fa-solid fa-envelope"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="agent-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/images/agent-3.jpg" alt="Lindiwe Dlamini">
+          <!-- photo needed: professional headshot of a female real estate agent, business attire, friendly smile, portrait orientation -->
+          <div class="agent-body">
+            <h3>Lindiwe Dlamini</h3>
+            <span>Rentals Agent</span>
+            <div class="agent-contact">
+              <a href="tel:+27110003333"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:lindiwe@bluepeak.co.za"><i class="fa-solid fa-envelope"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="agent-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/images/agent-4.jpg" alt="Pieter van Wyk">
+          <!-- photo needed: professional headshot of a male real estate agent, business attire, friendly smile, portrait orientation -->
+          <div class="agent-body">
+            <h3>Pieter van Wyk</h3>
+            <span>Luxury Homes Agent</span>
+            <div class="agent-contact">
+              <a href="tel:+27110004444"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:pieter@bluepeak.co.za"><i class="fa-solid fa-envelope"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-all-wrap" data-aos="fade-up">
+        <a href="agents.html" class="btn btn-outline">View All Agents</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow">Client Stories</span>
+        <h2>What Our Clients Say</h2>
+      </div>
+
+      <div class="swiper testimonial-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide testimonial-card">
+            <img src="assets/images/client-1.jpg" alt="Kabelo M.">
+            <!-- photo needed: friendly headshot of a client (any gender), casual clothing, warm smile, square orientation -->
+            <p>"BluePeak found us a home in two weeks that ticked every box. The agent never pushed, just listened."</p>
+            <h4>Kabelo M.</h4>
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <img src="assets/images/client-2.jpg" alt="Amanda S.">
+            <!-- photo needed: friendly headshot of a client (any gender), casual clothing, warm smile, square orientation -->
+            <p>"Selling our commercial unit felt overwhelming until BluePeak handled everything end to end."</p>
+            <h4>Amanda S.</h4>
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <img src="assets/images/client-3.jpg" alt="Sipho N.">
+            <!-- photo needed: friendly headshot of a client (any gender), casual clothing, warm smile, square orientation -->
+            <p>"The mortgage calculator on their site actually matched what the bank quoted us. Saved so much guesswork."</p>
+            <h4>Sipho N.</h4>
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MORTGAGE CALCULATOR PREVIEW ===== -->
+  <section class="mortgage-preview">
+    <div class="container mortgage-preview-grid">
+      <div class="mortgage-preview-text" data-aos="fade-right">
+        <span class="eyebrow">Plan Ahead</span>
+        <h2>Estimate Your Monthly Bond</h2>
+        <p>Get an instant estimate of your monthly repayments before you start house hunting — no signup required.</p>
+        <a href="mortgage-calculator.html" class="btn btn-primary">Open Full Calculator</a>
+      </div>
+
+      <form class="mortgage-mini-calc" id="miniMortgageForm" data-aos="fade-left">
+        <div class="form-group">
+          <label for="miniLoanAmount">Loan Amount (R)</label>
+          <input type="number" id="miniLoanAmount" name="loanAmount" placeholder="e.g. 1500000" required>
+        </div>
+        <div class="form-group">
+          <label for="miniInterestRate">Interest Rate (%)</label>
+          <input type="number" id="miniInterestRate" name="interestRate" step="0.1" placeholder="e.g. 11.25" required>
+        </div>
+        <div class="form-group">
+          <label for="miniLoanYears">Loan Term (Years)</label>
+          <input type="number" id="miniLoanYears" name="loanYears" placeholder="e.g. 20" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Calculate</button>
+
+        <div class="mini-calc-result" id="miniCalcResult" hidden>
+          <span>Estimated Monthly Payment</span>
+          <h3 id="miniCalcAmount">R 0</h3>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== LATEST PROPERTIES SLIDER ===== -->
+  <section class="latest-properties">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow">Just Listed</span>
+        <h2>Latest Properties</h2>
+      </div>
+
+      <div class="swiper latest-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="property-card" data-id="bp-007">
+              <div class="property-image">
+                <img src="assets/images/property-7.jpg" alt="New apartment listing in Centurion">
+                <!-- photo needed: modern apartment exterior, daytime, landscape orientation -->
+                <span class="property-badge badge-new">New</span>
+                <button class="favorite-btn" data-id="bp-007" aria-label="Save property">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="property-body">
+                <span class="property-price">R 2,150,000</span>
+                <h3>Modern 3-Bed Apartment</h3>
+                <p class="property-address"><i class="fa-solid fa-location-dot"></i> Centurion</p>
+                <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="property-card" data-id="bp-008">
+              <div class="property-image">
+                <img src="assets/images/property-8.jpg" alt="New family home listing in Midrand">
+                <!-- photo needed: family home exterior, daytime, landscape orientation -->
+                <span class="property-badge badge-new">New</span>
+                <button class="favorite-btn" data-id="bp-008" aria-label="Save property">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="property-body">
+                <span class="property-price">R 3,400,000</span>
+                <h3>Family Home with Garden</h3>
+                <p class="property-address"><i class="fa-solid fa-location-dot"></i> Midrand</p>
+                <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="property-card" data-id="bp-009">
+              <div class="property-image">
+                <img src="assets/images/property-9.jpg" alt="New commercial listing in Pretoria">
+                <!-- photo needed: commercial building exterior, daytime, landscape orientation -->
+                <span class="property-badge badge-new">New</span>
+                <button class="favorite-btn" data-id="bp-009" aria-label="Save property">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="property-body">
+                <span class="property-price">R 21,000 <small>/month</small></span>
+                <h3>Retail Space</h3>
+                <p class="property-address"><i class="fa-solid fa-location-dot"></i> Pretoria CBD</p>
+                <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="property-card" data-id="bp-010">
+              <div class="property-image">
+                <img src="assets/images/property-10.jpg" alt="New townhouse listing in Sandton">
+                <!-- photo needed: townhouse exterior, daytime, landscape orientation -->
+                <span class="property-badge badge-new">New</span>
+                <button class="favorite-btn" data-id="bp-010" aria-label="Save property">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="property-body">
+                <span class="property-price">R 2,950,000</span>
+                <h3>Secure Townhouse Complex</h3>
+                <p class="property-address"><i class="fa-solid fa-location-dot"></i> Sandton</p>
+                <a href="property-details.html" class="btn btn-outline btn-block">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LATEST ARTICLES ===== -->
+  <section class="blog-preview">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow">Property Tips</span>
+        <h2>Latest Articles</h2>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card" data-aos="fade-up">
+          <img src="assets/images/blog-1.jpg" alt="House viewing checklist">
+          <!-- photo needed: person viewing a house with agent, or house exterior, landscape orientation -->
+          <div class="blog-card-body">
+            <span class="blog-category">Buying Guide</span>
+            <h3>What to Check Before You Buy</h3>
+            <span class="blog-date">June 2026</span>
+          </div>
+        </article>
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/images/blog-2.jpg" alt="Mortgage paperwork on a desk">
+          <!-- photo needed: mortgage/finance paperwork or calculator on a desk, landscape orientation -->
+          <div class="blog-card-body">
+            <span class="blog-category">Investment Advice</span>
+            <h3>Is Now a Good Time to Invest in Property?</h3>
+            <span class="blog-date">June 2026</span>
+          </div>
+        </article>
+        <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/images/blog-3.jpg" alt="Home renovation in progress">
+          <!-- photo needed: home renovation or interior upgrade in progress, landscape orientation -->
+          <div class="blog-card-body">
+            <span class="blog-category">Home Improvement</span>
+            <h3>5 Upgrades That Add Real Resale Value</h3>
+            <span class="blog-date">May 2026</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section">
+    <div class="container newsletter-content" data-aos="fade-up">
+      <div>
+        <h2>Never Miss a New Listing</h2>
+        <p>Get fresh properties and market tips delivered to your inbox.</p>
+      </div>
+      <form class="newsletter-form-inline">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-mountain-city"></i>
+          <span>BluePeak</span>
+        </a>
+        <p>Find Your Perfect Place. Premium property solutions across South Africa.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="properties.html">Properties</a>
+        <a href="agents.html">Agents</a>
+        <a href="about.html">About</a>
+        <a href="mortgage-calculator.html">Mortgage Calculator</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Buying</a>
+        <a href="services.html">Selling</a>
+        <a href="services.html">Renting</a>
+        <a href="services.html">Property Valuation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 88 Rivonia Road, Sandton</p>
+        <p><i class="fa-solid fa-phone"></i> +27 11 000 1000</p>
+        <p><i class="fa-solid fa-envelope"></i> info@bluepeak.co.za</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 BluePeak Properties. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+  <a href="https://wa.me/27110001000" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
+</body>
+</html>

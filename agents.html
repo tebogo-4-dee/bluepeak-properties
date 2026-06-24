@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Agents | BluePeak Properties</title>
+  <meta name="description" content="Meet the BluePeak Properties team — licensed agents specializing in residential, commercial, luxury, and rental properties across South Africa.">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-mountain-city"></i>
+        <span>BluePeak</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="agents.html" class="active">Agents</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="mortgage-calculator.html">Mortgage Calculator</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-cta">Contact Agent</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container" data-aos="fade-up">
+      <span class="eyebrow">Meet The Team</span>
+      <h1>Our Agents</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a> / Agents</p>
+    </div>
+  </section>
+
+  <!-- ===== AGENT FILTER ===== -->
+  <section class="agent-filter-section">
+    <div class="container">
+      <div class="agent-filter-tabs" data-aos="fade-up">
+        <button class="agent-filter-btn active" data-filter="all">All Agents</button>
+        <button class="agent-filter-btn" data-filter="residential">Residential</button>
+        <button class="agent-filter-btn" data-filter="commercial">Commercial</button>
+        <button class="agent-filter-btn" data-filter="luxury">Luxury Homes</button>
+        <button class="agent-filter-btn" data-filter="rentals">Rentals</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AGENTS GRID (DETAILED) ===== -->
+  <section class="agents-detailed-section">
+    <div class="container">
+      <div class="agents-detailed-grid">
+
+        <div class="agent-detailed-card" data-category="residential" data-aos="fade-up">
+          <div class="agent-detailed-image">
+            <img src="assets/images/agent-1.jpg" alt="Nomvula Khumalo">
+            <!-- photo needed: professional headshot of a female real estate agent, business attire, friendly smile, portrait orientation -->
+          </div>
+          <div class="agent-detailed-body">
+            <h3>Nomvula Khumalo</h3>
+            <span class="agent-specialty">Senior Sales Agent</span>
+            <p class="agent-meta"><i class="fa-solid fa-briefcase"></i> 9 years experience</p>
+            <p class="agent-meta"><i class="fa-solid fa-house-circle-check"></i> 142 properties sold</p>
+            <p class="agent-meta"><i class="fa-solid fa-language"></i> English, Zulu, Sesotho</p>
+            <div class="agent-tags">
+              <span>Residential</span>
+              <span>First-Time Buyers</span>
+            </div>
+            <div class="agent-detailed-contact">
+              <a href="tel:+27110001111" aria-label="Call Nomvula"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:nomvula@bluepeak.co.za" aria-label="Email Nomvula"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://wa.me/27110001111" target="_blank" aria-label="WhatsApp Nomvula"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#" aria-label="Nomvula on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="contact.html" class="btn btn-outline btn-block">Contact Agent</a>
+          </div>
+        </div>
+
+        <div class="agent-detailed-card" data-category="commercial" data-aos="fade-up" data-aos-delay="50">
+          <div class="agent-detailed-image">
+            <img src="assets/images/agent-2.jpg" alt="Ryan Botha">
+            <!-- photo needed: professional headshot of a male real estate agent, business attire, friendly smile, portrait orientation -->
+          </div>
+          <div class="agent-detailed-body">
+            <h3>Ryan Botha</h3>
+            <span class="agent-specialty">Commercial Specialist</span>
+            <p class="agent-meta"><i class="fa-solid fa-briefcase"></i> 12 years experience</p>
+            <p class="agent-meta"><i class="fa-solid fa-house-circle-check"></i> 88 properties sold</p>
+            <p class="agent-meta"><i class="fa-solid fa-language"></i> English, Afrikaans</p>
+            <div class="agent-tags">
+              <span>Commercial</span>
+              <span>Industrial</span>
+            </div>
+            <div class="agent-detailed-contact">
+              <a href="tel:+27110002222" aria-label="Call Ryan"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:ryan@bluepeak.co.za" aria-label="Email Ryan"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://wa.me/27110002222" target="_blank" aria-label="WhatsApp Ryan"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#" aria-label="Ryan on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="contact.html" class="btn btn-outline btn-block">Contact Agent</a>
+          </div>
+        </div>
+
+        <div class="agent-detailed-card" data-category="rentals" data-aos="fade-up" data-aos-delay="100">
+          <div class="agent-detailed-image">
+            <img src="assets/images/agent-3.jpg" alt="Lindiwe Dlamini">
+            <!-- photo needed: professional headshot of a female real estate agent, business attire, friendly smile, portrait orientation -->
+          </div>
+          <div class="agent-detailed-body">
+            <h3>Lindiwe Dlamini</h3>
+            <span class="agent-specialty">Rentals Agent</span>
+            <p class="agent-meta"><i class="fa-solid fa-briefcase"></i> 6 years experience</p>
+            <p class="agent-meta"><i class="fa-solid fa-house-circle-check"></i> 210 leases signed</p>
+            <p class="agent-meta"><i class="fa-solid fa-language"></i> English, Zulu, Xhosa</p>
+            <div class="agent-tags">
+              <span>Rentals</span>
+              <span>Student Housing</span>
+            </div>
+            <div class="agent-detailed-contact">
+              <a href="tel:+27110003333" aria-label="Call Lindiwe"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:lindiwe@bluepeak.co.za" aria-label="Email Lindiwe"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://wa.me/27110003333" target="_blank" aria-label="WhatsApp Lindiwe"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#" aria-label="Lindiwe on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="contact.html" class="btn btn-outline btn-block">Contact Agent</a>
+          </div>
+        </div>
+
+        <div class="agent-detailed-card" data-category="luxury" data-aos="fade-up" data-aos-delay="150">
+          <div class="agent-detailed-image">
+            <img src="assets/images/agent-4.jpg" alt="Pieter van Wyk">
+            <!-- photo needed: professional headshot of a male real estate agent, business attire, friendly smile, portrait orientation -->
+          </div>
+          <div class="agent-detailed-body">
+            <h3>Pieter van Wyk</h3>
+            <span class="agent-specialty">Luxury Homes Agent</span>
+            <p class="agent-meta"><i class="fa-solid fa-briefcase"></i> 15 years experience</p>
+            <p class="agent-meta"><i class="fa-solid fa-house-circle-check"></i> 76 properties sold</p>
+            <p class="agent-meta"><i class="fa-solid fa-language"></i> English, Afrikaans</p>
+            <div class="agent-tags">
+              <span>Luxury Homes</span>
+              <span>Estates</span>
+            </div>
+            <div class="agent-detailed-contact">
+              <a href="tel:+27110004444" aria-label="Call Pieter"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:pieter@bluepeak.co.za" aria-label="Email Pieter"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://wa.me/27110004444" target="_blank" aria-label="WhatsApp Pieter"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#" aria-label="Pieter on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="contact.html" class="btn btn-outline btn-block">Contact Agent</a>
+          </div>
+        </div>
+
+        <div class="agent-detailed-card" data-category="residential" data-aos="fade-up" data-aos-delay="200">
+          <div class="agent-detailed-image">
+            <img src="assets/images/agent-5.jpg" alt="Naledi Mahlangu">
+            <!-- photo needed: professional headshot of a female real estate agent, business attire, friendly smile, portrait orientation -->
+          </div>
+          <div class="agent-detailed-body">
+            <h3>Naledi Mahlangu</h3>
+            <span class="agent-specialty">Residential Specialist</span>
+            <p class="agent-meta"><i class="fa-solid fa-briefcase"></i> 7 years experience</p>
+            <p class="agent-meta"><i class="fa-solid fa-house-circle-check"></i> 119 properties sold</p>
+            <p class="agent-meta"><i class="fa-solid fa-language"></i> English, Setswana, Sesotho</p>
+            <div class="agent-tags">
+              <span>Residential</span>
+              <span>Townhouses</span>
+            </div>
+            <div class="agent-detailed-contact">
+              <a href="tel:+27110005555" aria-label="Call Naledi"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:naledi@bluepeak.co.za" aria-label="Email Naledi"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://wa.me/27110005555" target="_blank" aria-label="WhatsApp Naledi"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#" aria-label="Naledi on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="contact.html" class="btn btn-outline btn-block">Contact Agent</a>
+          </div>
+        </div>
+
+        <div class="agent-detailed-card" data-category="commercial" data-aos="fade-up" data-aos-delay="250">
+          <div class="agent-detailed-image">
+            <img src="assets/images/agent-6.jpg" alt="Brendan Fischer">
+            <!-- photo needed: professional headshot of a male real estate agent, business attire, friendly smile, portrait orientation -->
+          </div>
+          <div class="agent-detailed-body">
+            <h3>Brendan Fischer</h3>
+            <span class="agent-specialty">Investment Specialist</span>
+            <p class="agent-meta"><i class="fa-solid fa-briefcase"></i> 10 years experience</p>
+            <p class="agent-meta"><i class="fa-solid fa-house-circle-check"></i> 94 properties sold</p>
+            <p class="agent-meta"><i class="fa-solid fa-language"></i> English, German</p>
+            <div class="agent-tags">
+              <span>Commercial</span>
+              <span>Investment</span>
+            </div>
+            <div class="agent-detailed-contact">
+              <a href="tel:+27110006666" aria-label="Call Brendan"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:brendan@bluepeak.co.za" aria-label="Email Brendan"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://wa.me/27110006666" target="_blank" aria-label="WhatsApp Brendan"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="#" aria-label="Brendan on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="contact.html" class="btn btn-outline btn-block">Contact Agent</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JOIN THE TEAM ===== -->
+  <section class="join-team">
+    <div class="container join-team-content" data-aos="fade-up">
+      <i class="fa-solid fa-user-plus"></i>
+      <div>
+        <h3>Are You a Licensed Agent?</h3>
+        <p>BluePeak is always looking to grow its team with driven, client-focused agents.</p>
+      </div>
+      <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-mountain-city"></i>
+          <span>BluePeak</span>
+        </a>
+        <p>Find Your Perfect Place. Premium property solutions across South Africa.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="properties.html">Properties</a>
+        <a href="agents.html">Agents</a>
+        <a href="about.html">About</a>
+        <a href="mortgage-calculator.html">Mortgage Calculator</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Buying</a>
+        <a href="services.html">Selling</a>
+        <a href="services.html">Renting</a>
+        <a href="services.html">Property Valuation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 88 Rivonia Road, Sandton</p>
+        <p><i class="fa-solid fa-phone"></i> +27 11 000 1000</p>
+        <p><i class="fa-solid fa-envelope"></i> info@bluepeak.co.za</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 BluePeak Properties. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <a href="https://wa.me/27110001000" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

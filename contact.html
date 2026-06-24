@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | BluePeak Properties</title>
+  <meta name="description" content="Get in touch with BluePeak Properties. Find our office address, phone number, business hours, and send us a message directly.">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-mountain-city"></i>
+        <span>BluePeak</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="agents.html">Agents</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="mortgage-calculator.html">Mortgage Calculator</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-cta">Contact Agent</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container" data-aos="fade-up">
+      <span class="eyebrow">Get In Touch</span>
+      <h1>Contact BluePeak</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a> / Contact</p>
+    </div>
+  </section>
+
+  <!-- ===== QUICK CONTACT CARDS ===== -->
+  <section class="quick-contact">
+    <div class="container quick-contact-grid">
+      <div class="quick-contact-card" data-aos="fade-up">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Visit Us</h3>
+        <p>88 Rivonia Road, Sandton, Johannesburg</p>
+      </div>
+      <div class="quick-contact-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Call Us</h3>
+        <p><a href="tel:+27110001000">+27 11 000 1000</a></p>
+      </div>
+      <div class="quick-contact-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email Us</h3>
+        <p><a href="mailto:info@bluepeak.co.za">info@bluepeak.co.za</a></p>
+      </div>
+      <div class="quick-contact-card" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Business Hours</h3>
+        <p>Mon–Fri: 08:00–17:00<br>Sat: 09:00–13:00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP + FORM ===== -->
+  <section class="contact-section">
+    <div class="container contact-layout">
+
+      <!-- MAP -->
+      <div class="contact-map" data-aos="fade-right">
+        <iframe
+          src="https://www.google.com/maps?q=Sandton,Johannesburg,South+Africa&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="BluePeak Properties office location map">
+        </iframe>
+      </div>
+
+      <!-- FORM -->
+      <div class="contact-form-wrap" data-aos="fade-left">
+
+        <form id="contactForm" class="appointment-form" novalidate>
+          <h2>Send Us a Message</h2>
+          <p class="form-subtext">We typically respond within one business day.</p>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactName">Full Name *</label>
+              <input type="text" id="contactName" name="contactName" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input type="email" id="contactEmail" name="contactEmail" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactPhone">Phone Number</label>
+              <input type="tel" id="contactPhone" name="contactPhone">
+            </div>
+            <div class="form-group">
+              <label for="contactReason">I'm Interested In *</label>
+              <select id="contactReason" name="contactReason" required>
+                <option value="" disabled selected>Select a reason</option>
+                <option value="buying">Buying a Property</option>
+                <option value="selling">Selling a Property</option>
+                <option value="renting">Renting a Property</option>
+                <option value="valuation">Property Valuation</option>
+                <option value="other">Other Enquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Message *</label>
+            <textarea id="contactMessage" name="contactMessage" rows="5" required placeholder="How can we help?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+
+        <div id="contactConfirmation" class="confirmation-box" hidden>
+          <i class="fa-solid fa-circle-check"></i>
+          <h2>Message Sent</h2>
+          <p>Thanks for reaching out, <span id="contactConfirmName"></span>. Our team will get back to you shortly.</p>
+          <button type="button" id="contactAnotherBtn" class="btn btn-outline">Send Another Message</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== OFFICE LOCATIONS ===== -->
+  <section class="offices-section">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow">Find Us</span>
+        <h2>Our Office Locations</h2>
+      </div>
+
+      <div class="offices-grid">
+        <div class="office-card" data-aos="fade-up">
+          <i class="fa-solid fa-building"></i>
+          <h3>Sandton (Head Office)</h3>
+          <p>88 Rivonia Road, Sandton, Johannesburg</p>
+          <p><i class="fa-solid fa-phone"></i> +27 11 000 1000</p>
+        </div>
+        <div class="office-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-building"></i>
+          <h3>Pretoria Branch</h3>
+          <p>21 Hatfield Street, Hatfield, Pretoria</p>
+          <p><i class="fa-solid fa-phone"></i> +27 12 000 2000</p>
+        </div>
+        <div class="office-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-building"></i>
+          <h3>Centurion Branch</h3>
+          <p>5 Centurion Mall Drive, Centurion</p>
+          <p><i class="fa-solid fa-phone"></i> +27 12 000 3000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHATSAPP BANNER ===== -->
+  <section class="emergency-banner">
+    <div class="container emergency-content" data-aos="fade-up">
+      <i class="fa-brands fa-whatsapp"></i>
+      <div>
+        <h3>Prefer WhatsApp?</h3>
+        <p>Message us directly for quick answers on listings, viewings, or general enquiries.</p>
+      </div>
+      <a href="https://wa.me/27110001000" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-mountain-city"></i>
+          <span>BluePeak</span>
+        </a>
+        <p>Find Your Perfect Place. Premium property solutions across South Africa.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="properties.html">Properties</a>
+        <a href="agents.html">Agents</a>
+        <a href="about.html">About</a>
+        <a href="mortgage-calculator.html">Mortgage Calculator</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Buying</a>
+        <a href="services.html">Selling</a>
+        <a href="services.html">Renting</a>
+        <a href="services.html">Property Valuation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 88 Rivonia Road, Sandton</p>
+        <p><i class="fa-solid fa-phone"></i> +27 11 000 1000</p>
+        <p><i class="fa-solid fa-envelope"></i> info@bluepeak.co.za</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 BluePeak Properties. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <a href="https://wa.me/27110001000" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

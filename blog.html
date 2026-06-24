@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Blog | BluePeak Properties</title>
+  <meta name="description" content="Read property tips, buying and selling guides, investment advice, and home improvement ideas from BluePeak Properties.">
+
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-mountain-city"></i>
+        <span>BluePeak</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="agents.html">Agents</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="mortgage-calculator.html">Mortgage Calculator</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-cta">Contact Agent</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container" data-aos="fade-up">
+      <span class="eyebrow">Property Tips</span>
+      <h1>The BluePeak Blog</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a> / Blog</p>
+    </div>
+  </section>
+
+  <!-- ===== BLOG LAYOUT ===== -->
+  <section class="blog-section">
+    <div class="container blog-layout">
+
+      <!-- MAIN COLUMN -->
+      <div class="blog-main">
+
+        <div class="blog-detailed-grid" id="blogGrid">
+
+          <article class="blog-card" data-category="buying" data-aos="fade-up">
+            <img src="assets/images/blog-1.jpg" alt="Person viewing a house with an agent">
+            <!-- photo needed: person viewing a house with an agent, daytime, landscape orientation -->
+            <div class="blog-card-body">
+              <span class="blog-category">Buying Guide</span>
+              <h3>What to Check Before You Buy</h3>
+              <span class="blog-date">June 2026</span>
+              <p>A practical inspection checklist covering roofing, plumbing, electrical, and structural red flags to look for during a viewing.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="investment" data-aos="fade-up" data-aos-delay="50">
+            <img src="assets/images/blog-2.jpg" alt="Mortgage and finance paperwork on a desk">
+            <!-- photo needed: mortgage/finance paperwork or calculator on a desk, landscape orientation -->
+            <div class="blog-card-body">
+              <span class="blog-category">Investment Advice</span>
+              <h3>Is Now a Good Time to Invest in Property?</h3>
+              <span class="blog-date">June 2026</span>
+              <p>How interest rate cycles and rental demand in Gauteng's growth nodes affect timing for property investors.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="selling" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/images/blog-3.jpg" alt="For sale sign outside a house">
+            <!-- photo needed: "for sale" sign outside a house, daytime, landscape orientation -->
+            <div class="blog-card-body">
+              <span class="blog-category">Selling Guide</span>
+              <h3>How to Price Your Home Correctly the First Time</h3>
+              <span class="blog-date">June 2026</span>
+              <p>Why overpricing costs sellers more in the long run, and how comparable sales data shapes an accurate asking price.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="improvement" data-aos="fade-up">
+            <img src="assets/images/blog-4.jpg" alt="Home renovation in progress">
+            <!-- photo needed: home renovation or interior upgrade in progress, landscape orientation -->
+            <div class="blog-card-body">
+              <span class="blog-category">Home Improvement</span>
+              <h3>5 Upgrades That Add Real Resale Value</h3>
+              <span class="blog-date">May 2026</span>
+              <p>Kitchen refreshes and kerb appeal consistently outperform luxury add-ons when it comes to actual resale return.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="buying" data-aos="fade-up" data-aos-delay="50">
+            <img src="assets/images/blog-5.jpg" alt="First-time home buyers receiving keys">
+            <!-- photo needed: first-time buyers receiving house keys, happy moment, landscape orientation -->
+            <div class="blog-card-body">
+              <span class="blog-category">Buying Guide</span>
+              <h3>A First-Time Buyer's Guide to Bond Pre-Approval</h3>
+              <span class="blog-date">May 2026</span>
+              <p>Why getting pre-approved before house hunting saves time, and what documents banks typically require.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <article class="blog-card" data-category="investment" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/images/blog-6.jpg" alt="Apartment building representing rental yield">
+            <!-- photo needed: modern apartment building exterior, daytime, landscape orientation -->
+            <div class="blog-card-body">
+              <span class="blog-category">Investment Advice</span>
+              <h3>Calculating Rental Yield Before You Buy to Let</h3>
+              <span class="blog-date">May 2026</span>
+              <p>A simple formula for estimating gross and net rental yield so you can compare properties on actual returns.</p>
+              <a href="#" class="blog-read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination" data-aos="fade-up">
+          <button class="page-btn active" data-page="1">1</button>
+          <button class="page-btn" data-page="2">2</button>
+          <button class="page-btn" data-page="3">3</button>
+          <button class="page-btn page-next" aria-label="Next page"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-sidebar" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="sidebar-card">
+          <h3><i class="fa-solid fa-magnifying-glass"></i> Search</h3>
+          <form class="search-form" id="blogSearchForm">
+            <input type="text" id="blogSearchInput" placeholder="Search articles...">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+
+        <div class="sidebar-card">
+          <h3><i class="fa-solid fa-tags"></i> Categories</h3>
+          <ul class="category-list">
+            <li><button class="category-btn active" data-filter="all">All Articles <span>6</span></button></li>
+            <li><button class="category-btn" data-filter="buying">Buying Guide <span>2</span></button></li>
+            <li><button class="category-btn" data-filter="selling">Selling Guide <span>1</span></button></li>
+            <li><button class="category-btn" data-filter="investment">Investment Advice <span>2</span></button></li>
+            <li><button class="category-btn" data-filter="improvement">Home Improvement <span>1</span></button></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3><i class="fa-solid fa-clock-rotate-left"></i> Recent Posts</h3>
+          <div class="recent-post">
+            <img src="assets/images/blog-thumb-1.jpg" alt="">
+            <!-- photo needed: small square thumbnail, house viewing close-up -->
+            <div>
+              <h4>What to Check Before You Buy</h4>
+              <span>June 2026</span>
+            </div>
+          </div>
+          <div class="recent-post">
+            <img src="assets/images/blog-thumb-2.jpg" alt="">
+            <!-- photo needed: small square thumbnail, finance/mortgage paperwork close-up -->
+            <div>
+              <h4>Is Now a Good Time to Invest?</h4>
+              <span>June 2026</span>
+            </div>
+          </div>
+          <div class="recent-post">
+            <img src="assets/images/blog-thumb-3.jpg" alt="">
+            <!-- photo needed: small square thumbnail, "for sale" sign close-up -->
+            <div>
+              <h4>Pricing Your Home Correctly</h4>
+              <span>June 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card sidebar-newsletter">
+          <h3><i class="fa-solid fa-envelope-open-text"></i> Stay Updated</h3>
+          <p>Get new listings and property tips straight to your inbox.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+          </form>
+        </div>
+
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo">
+          <i class="fa-solid fa-mountain-city"></i>
+          <span>BluePeak</span>
+        </a>
+        <p>Find Your Perfect Place. Premium property solutions across South Africa.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="properties.html">Properties</a>
+        <a href="agents.html">Agents</a>
+        <a href="about.html">About</a>
+        <a href="mortgage-calculator.html">Mortgage Calculator</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Buying</a>
+        <a href="services.html">Selling</a>
+        <a href="services.html">Renting</a>
+        <a href="services.html">Property Valuation</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> 88 Rivonia Road, Sandton</p>
+        <p><i class="fa-solid fa-phone"></i> +27 11 000 1000</p>
+        <p><i class="fa-solid fa-envelope"></i> info@bluepeak.co.za</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 BluePeak Properties. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <a href="https://wa.me/27110001000" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
